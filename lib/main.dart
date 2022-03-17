@@ -461,7 +461,9 @@ class _Sayfa1State extends State<Sayfa1> {
                                 child: Align(
                                   alignment: Alignment.topLeft,
                                   child: Row(children: [
-                                    Text(time.hour.toString(),
+                                    Text(
+                                        ww?.date?.hour.toString() ??
+                                            " Yükleniyor...",
                                         style: GoogleFonts.spartan(
                                             color: Colors.white70,
                                             fontSize: 20)),
@@ -475,10 +477,22 @@ class _Sayfa1State extends State<Sayfa1> {
                                     //             color: Colors.white70,
                                     //             fontSize: 20))
                                     //     : Text(""),
-                                    Text(time.minute.toString(),
+                                    ww!.date!.minute < 10
+                                        ? Text("0",
+                                            style: GoogleFonts.spartan(
+                                                color: Colors.white70,
+                                                fontSize: 20))
+                                        : Text(""),
+                                    Text(
+                                        ww?.date?.minute.toString() ??
+                                            " Yükleniyor...",
                                         style: GoogleFonts.spartan(
                                             color: Colors.white70,
                                             fontSize: 20)),
+                                    Text("  son güncelleme",
+                                        style: GoogleFonts.spartan(
+                                            color: Colors.white60,
+                                            fontSize: 13))
                                   ]),
                                 ),
                               ),
