@@ -5,7 +5,9 @@ import '../Pages/launch_function.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
-ScrollController sc = ScrollController();
+double yk(double yk1) {
+  return yk1--;
+}
 
 Widget makeHistoryPage(String map_location, String image, String title,
     String description, int page, int totalPageh) {
@@ -13,12 +15,11 @@ Widget makeHistoryPage(String map_location, String image, String title,
     decoration: BoxDecoration(
       image: DecorationImage(
           colorFilter: ColorFilter.mode(
-              Colors.black.withOpacity(0.60), BlendMode.darken),
+              Colors.black.withOpacity(0.55), BlendMode.darken),
           image: AssetImage(image),
           fit: BoxFit.cover),
     ),
     child: SingleChildScrollView(
-      controller: sc,
       child: Column(children: [
         Padding(
           padding: const EdgeInsets.only(right: 8.0, top: 8, bottom: 15),
@@ -48,7 +49,7 @@ Widget makeHistoryPage(String map_location, String image, String title,
         // ),
         AnimatedContainer(
           duration: const Duration(seconds: 1),
-          height: sc.offset,
+          height: 250,
           width: 250,
         ),
         Padding(

@@ -47,7 +47,7 @@ class _HistoryState extends State<History> {
             }
           }
 
-          print(sayfano);
+          //print(sayfano);
         },
         controller: _pageController,
         children: [
