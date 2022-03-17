@@ -20,6 +20,10 @@ double lon1 = 29.610958820726804;
 List<Weather> wdata = [];
 List<Weather> wfdata = [];
 double temp = 0;
+int dakika = 21;
+
+double yukseklik = 250;
+int sayfano = 1;
 
 DateTime time = DateTime.now();
 bool canSwim = false;

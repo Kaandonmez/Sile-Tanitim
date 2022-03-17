@@ -114,6 +114,7 @@ class _Sayfa1State extends State<Sayfa1> {
       ww = weather;
       weathericon = weather.weatherIcon!;
       fullicon = weathericon1 + weathericon + weathericon2;
+      dakika = weather.date!.minute;
 
       //print(wdata.length.toString() + " kaan");
       //print(weather.weatherDescription);
@@ -477,15 +478,14 @@ class _Sayfa1State extends State<Sayfa1> {
                                     //             color: Colors.white70,
                                     //             fontSize: 20))
                                     //     : Text(""),
-                                    ww!.date!.minute < 10
+
+                                    dakika < 10
                                         ? Text("0",
                                             style: GoogleFonts.spartan(
                                                 color: Colors.white70,
                                                 fontSize: 20))
                                         : Text(""),
-                                    Text(
-                                        ww?.date?.minute.toString() ??
-                                            " Yükleniyor...",
+                                    Text(ww?.date?.minute.toString() ?? " ",
                                         style: GoogleFonts.spartan(
                                             color: Colors.white70,
                                             fontSize: 20)),

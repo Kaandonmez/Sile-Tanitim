@@ -11,7 +11,11 @@ class History extends StatefulWidget {
 
 class _HistoryState extends State<History> {
   late PageController _pageController;
-  void _onScroll() {}
+  void _onScroll() {
+    //print("sayfa değişiyor!");
+    //print(_pageController.page);
+    //print(sayfano);
+  }
 
   @override
   void initState() {
@@ -25,6 +29,26 @@ class _HistoryState extends State<History> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: PageView(
+        onPageChanged: (value) {
+          //_onScroll();
+
+          if (yukseklik == 50) {
+            setState(() {
+              yukseklik = 250;
+              sayfano = value;
+            });
+          }
+
+          if (sayfano != value) {
+            if (yukseklik == 250) {
+              setState(() {
+                yukseklik = 50;
+              });
+            }
+          }
+
+          print(sayfano);
+        },
         controller: _pageController,
         children: [
           // todo: makePagemetoduna map stringleri parametre olarak verilecek.
@@ -81,13 +105,13 @@ class _HistoryState extends State<History> {
               map_kadirga,
               sile_feneri,
               "Şile Feneri",
-              "Şile Deniz Feneri Türkiye’nin aktif en büyük feneridir. Işığı görüşün açık olduğu gecelerde yaklaşık 35 mil mesafeden görülebilir. 15 saniye aralıkla çakan bir fener olan Şile Feneri’nin kristalleri orijinal olup 8 kol olarak 1 turu tamamlar. Uluslararası standartlarda birinci sınıf deniz feneridir.Şile Deniz Feneri’nin tarihi değeri oldukça büyüktür. Kırım harbinde Karadeniz’ den İstanbul boğazına girecek gemilerin yollarını bulabilmeleri için yapılmış olan fener bu amaçla boğazlar civarında 1856‘ da yapılan Anadolu Fenerinden sonra faaliyete girmiştir. Taş yapısında Türk mimarlarımızın imzası olan Şile Deniz Feneri’nin  metal aksamı ve mercek kristal sistemi Fransa’ da bulunan Paris – Barbeur fabrikasında yapılmıştır. Yapımında ışık kaynağı olarak üç fitilli gaz lambası kullanılmış ve alt kısmında gazın dinlendirilerek süzülmesi için sarnıç şeklinde yapılan özel bir deposu vardır.",
+              "Şile Deniz Feneri Türkiye’nin aktif en büyük feneridir. Işığı görüşün açık olduğu gecelerde yaklaşık 35 mil mesafeden görülebilir. 15 saniye aralıkla çakan bir fener olan Şile Feneri’nin kristalleri orijinal olup 8 kol olarak 1 turu tamamlar. Uluslararası standartlarda birinci sınıf deniz feneridir.Şile Deniz Feneri’nin tarihi değeri oldukça büyüktür. Kırım harbinde Karadeniz’ den İstanbul boğazına girecek gemilerin yollarını bulabilmeleri için yapılmış olan fener bu amaçla boğazlar civarında 1856‘ da yapılan Anadolu Fenerinden sonra faaliyete girmiştir. Taş yapısında Türk mimarlarımızın imzası olan Şile Deniz Feneri’nin  metal aksamı ve mercek kristal sistemi Fransa’ da bulunan Paris – Barbeur fabrikasında yapılmıştır. Yapımında ışık kaynağı olarak üç fitilli gaz lambası kullanılmış ve alt kısmında gazın dinlendirilerek süzülmesi için sarnıç şeklinde yapılan özel bir deposu vardır. 1111111 111 lksdflskjfs df sdlkfj slkjf ls lf ls jkdj slj lkjlksjdlkfjlsjdf slkfj slkfj slkjklsjdfksfjslkjdfk sldkfj sdlkfjslkdjf slkfj skldfj slkdfj lksj lksdfj lsdkfj lsdfjlsdfjslkf sdklfj slkdfj sldkfj sdkfj ",
               7,
               totalHistoryPage),
           makeHistoryPage(
               map_boru,
               kayikhane,
-              "Jeolojik Miras Boru Kayalar",
+              "Tahlisiye Kayıkhanesi",
               "Tahlisiye teşkilatı en köklü denizcilik kurumlarımızdandır. Günümüzde Kıyı Emniyeti ve Gemi Kurtarma İşletmeleri adını alan teşkilat 1866 yılında Tahlisiye İdaresi adı altında kurulmuştur. Bu nedenle Karadeniz’de boğazın her iki yanında konuşlanan teşkilatın İngilizler tarafından 1866 da yapılan binaları ve eski kurtarma malzemeleri tarihi eser niteliğindedir.Şile merkezdeki istasyon, koğuş, kayıkhane ve rokethaneden oluşur.Karaburun tahlisiye binası koğuş, gözetleme kulesi ve kayıkhanesi ile halihazırda aktif bir tahlisiye binası olarak kullanılmaktadır.Kumbaba mevkiinde bulunan rokethane binası kullanımda değildir ve koruma altındadır. ",
               8,
               totalHistoryPage),
