@@ -6,19 +6,12 @@ import 'package:sile/Pages/main_screen.dart';
 import 'package:sile/Pages/mekanlar.dart';
 import 'package:sile/Pages/plajlar.dart';
 import 'package:sile/Pages/rehber.dart';
-import 'package:sile/Pages/sayfa2.dart';
+
 import 'package:sile/Pages/treasure.dart';
 import 'package:sile/config.dart';
-//import 'package:sile/Widget/generate_drawer.dart';
-import 'Pages/test1.dart';
-//import 'package:sile/Widget/generate_button_asset.dart' as eos;
-//import 'package:sile/Widget/generate_button.dart';
 import '/Pages/main_screen.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:weather/weather.dart';
-import 'dart:math';
-import 'package:intl/intl.dart';
 
 //import 'dart:async';
 enum AppState { NOT_DOWNLOADED, DOWNLOADING, FINISHED_DOWNLOADING }
@@ -37,8 +30,6 @@ void main() async {
       routes: {
         '/': (context) => Sayfa1(),
         //'/': (context) => MainScreen(),
-        '/sayfa2': (context) => FirstRoute(),
-        '/sayfa3': (context) => SecondRoute(),
         '/sayfa4': (context) => MainScreen(),
         '/mekanlar': (context) => Mekanlar(),
         '/plajlar': (context) => Plajlar(),

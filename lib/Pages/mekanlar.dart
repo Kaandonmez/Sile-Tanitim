@@ -2,14 +2,11 @@
 
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:sile/Widget/generate_button_asset.dart' as eos1;
-//import 'package:sile/main.dart';
-import '../Widget/generate_button.dart';
+
 import '../config.dart';
 import '../Widget/generate_drawer.dart';
-import '../Widget/generate_card.dart';
-//import 'package:expansion_card/expansion_card.dart';
-//import 'package:map_launcher/map_launcher.dart';
+//import '../Widget/generate_card.dart';
+
 import 'package:url_launcher/url_launcher.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 

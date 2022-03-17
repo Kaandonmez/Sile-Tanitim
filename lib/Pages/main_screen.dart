@@ -1,8 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:sile/Widget/generate_button_asset.dart' as eos1;
-//import 'package:sile/main.dart';
-import '../Widget/generate_button.dart';
 import '../config.dart';
 import '../Widget/generate_drawer.dart';
 import '../Widget/generate_card.dart';
