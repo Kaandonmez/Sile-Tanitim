@@ -14,6 +14,7 @@ import 'package:flutter/services.dart';
 import 'package:weather/weather.dart';
 import 'package:internet_connection_checker/internet_connection_checker.dart';
 import 'dart:io';
+import 'package:flutter_spinkit/flutter_spinkit.dart';
 
 //import 'dart:async';
 enum AppState { NOT_DOWNLOADED, DOWNLOADING, FINISHED_DOWNLOADING }
@@ -247,9 +248,13 @@ class _Sayfa1State extends State<Sayfa1> {
   void chk() async {
     final bool isConnected = await InternetConnectionChecker().hasConnection;
     if (isConnected) {
-      isInt = true;
+      setState(() {
+        isInt = true;
+      });
     } else {
-      isInt = false;
+      setState(() {
+        isInt = false;
+      });
     }
   }
 
@@ -274,14 +279,41 @@ class _Sayfa1State extends State<Sayfa1> {
       body: isInt == false
           ? Scaffold(
               body: Container(
-                child: Row(
+                decoration: BoxDecoration(
+                    image: DecorationImage(
+                        colorFilter: ColorFilter.mode(
+                            Colors.black.withOpacity(0.5), BlendMode.darken),
+                        image: AssetImage(bez),
+                        fit: BoxFit.cover)),
+                child: Stack(
+                  //mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Text("deneme"),
-                    IconButton(
-                        onPressed: () {
-                          get_it();
-                        },
-                        icon: Icon(Icons.refresh_rounded))
+                    Center(
+                      child: SpinKitSpinningLines(
+                        color: Colors.yellow,
+                        size: 120,
+                      ),
+                    ),
+                    Align(
+                      alignment: Alignment.topCenter,
+                      child: Container(
+                        margin: EdgeInsets.only(top: 15, right: 5, left: 5),
+                        child: Material(
+                          borderRadius: BorderRadius.circular(30),
+                          color: Colors.black.withOpacity(0.75),
+                          child: Padding(
+                            padding: const EdgeInsets.all(30),
+                            child: Container(
+                              child: Text(
+                                "İnternet Erişimi Bekleniyor",
+                                style: GoogleFonts.spartan(
+                                    color: Colors.white70, fontSize: 16),
+                              ),
+                            ),
+                          ),
+                        ),
+                      ),
+                    ),
                   ],
                 ),
               ),
