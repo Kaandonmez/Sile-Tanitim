@@ -9,6 +9,8 @@ double yk(double yk1) {
   return yk1--;
 }
 
+ScrollController sc = ScrollController();
+
 Widget makeHistoryPage(String map_location, String image, String title,
     String description, int page, int totalPageh, BuildContext context) {
   return Stack(children: [
@@ -21,6 +23,7 @@ Widget makeHistoryPage(String map_location, String image, String title,
             fit: BoxFit.cover),
       ),
       child: SingleChildScrollView(
+        controller: sc,
         child: Column(children: [
           Padding(
             padding: const EdgeInsets.only(right: 8.0, top: 8, bottom: 15),
@@ -97,6 +100,23 @@ Widget makeHistoryPage(String map_location, String image, String title,
             Navigator.pop(context);
           },
           child: Icon(Icons.arrow_back_ios_new_rounded),
-        ))
+        )),
+    Align(
+      alignment: Alignment.bottomRight,
+      child: Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: FloatingActionButton(
+          heroTag: "btn2",
+          foregroundColor: Colors.black,
+          backgroundColor: Colors.white70,
+          splashColor: Colors.green,
+          elevation: 11,
+          onPressed: () {
+            sc.position.moveTo(0);
+          },
+          child: Icon(Icons.arrow_upward_outlined),
+        ),
+      ),
+    )
   ]);
 }

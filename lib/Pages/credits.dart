@@ -40,9 +40,55 @@ class Credits extends StatelessWidget {
                     height: 10,
                   ),
                   Text(
-                      "Bu uygulama Şile'yi daha yakından tanımak isteyip keşfetmek isteyen kişiler için tasarlanmıştır. \n\n Uygulama içerisinde Şile Belediyesine ait sosyal tesislere kafelere ve restaurantlara ait konum bilgilerine ulaşabilirsiniz. Ayrıca plaj lokasyonlarına, tarihi yapılara, geleneksel yemeklere ait bilgilere de ulaşabilirisiniz.  ",
+                      "Bu uygulama Şile'yi daha yakından tanımak ve keşfetmek isteyen kişiler için tasarlanmıştır. \n\n Uygulama içerisinde Şile Belediyesine ait sosyal tesislere kafelere ve restaurantlara ait konum bilgilerine göz atabilirsiniz. Ayrıca plaj lokasyonlarına, tarihi yapılara, geleneksel yemeklere ait bilgilere de ulaşabilirisiniz. \n\nŞilede keyifli vakit geçirmeniz dileğiyle.",
                       style: GoogleFonts.spartan(
-                          color: Colors.white70, fontSize: 14, height: 1.9))
+                          color: Colors.white70, fontSize: 14, height: 1.9)),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      Icon(Icons.beach_access_rounded, color: Colors.yellow),
+                      SizedBox(
+                        width: 0,
+                      ),
+                      Icon(Icons.pool_rounded, color: Colors.blue),
+                      SizedBox(
+                        width: 0,
+                      ),
+                      Icon(Icons.restaurant, color: Colors.orange),
+                      SizedBox(
+                        width: 0,
+                      ),
+                      Icon(Icons.luggage_rounded, color: Colors.green),
+                      SizedBox(
+                        width: 0,
+                      ),
+                      Icon(Icons.directions_bike_rounded, color: Colors.teal),
+                      SizedBox(
+                        width: 0,
+                      ),
+                      Icon(Icons.lunch_dining_rounded,
+                          color: Colors.yellow[800]),
+                      SizedBox(
+                        width: 0,
+                      ),
+                      Icon(Icons.outdoor_grill_rounded, color: Colors.red[300]),
+                      SizedBox(
+                        width: 0,
+                      ),
+                      Icon(Icons.surfing_rounded, color: Colors.blue),
+                      SizedBox(
+                        width: 0,
+                      ),
+                      Icon(Icons.kitesurfing_rounded, color: Colors.lightBlue),
+                      SizedBox(
+                        width: 0,
+                      ),
+                      Icon(Icons.hiking, color: Colors.brown[400]),
+                      SizedBox(
+                        width: 0,
+                      ),
+                    ],
+                  )
                 ]),
               ),
             ),
