@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:sile/Pages/credits.dart';
 import 'package:sile/Pages/gastro.dart';
 import 'package:sile/Pages/history.dart';
 import 'package:sile/Pages/main_screen.dart';
@@ -16,7 +17,6 @@ import 'package:internet_connection_checker/internet_connection_checker.dart';
 import 'dart:io';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 
-//import 'dart:async';
 enum AppState { NOT_DOWNLOADED, DOWNLOADING, FINISHED_DOWNLOADING }
 
 void main() async {
@@ -40,6 +40,7 @@ void main() async {
         '/history': (context) => History(),
         '/gastro': (context) => Gastro(),
         '/rehber': (context) => Rehber(),
+        '/credits': (context) => Credits()
       },
     ),
   );

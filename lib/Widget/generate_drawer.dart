@@ -24,7 +24,7 @@ Widget generate_list(BuildContext tur) {
         child: ListView(
           children: <Widget>[
             SizedBox(
-              height: 40,
+              height: 4,
             ),
             DrawerHeader(
               child: Align(
@@ -135,7 +135,7 @@ Widget generate_list(BuildContext tur) {
               borderRadius: BorderRadius.all(Radius.circular(25)),
               color: Colors.grey.withOpacity(0.70),
               child: ListTile(
-                leading: Icon(Icons.keyboard),
+                leading: Icon(Icons.travel_explore_rounded),
                 title: Text(
                   'Şile\'ye Rota Oluştur',
                   style: GoogleFonts.spartan(
@@ -156,8 +156,8 @@ Widget generate_list(BuildContext tur) {
               borderRadius: BorderRadius.all(Radius.circular(25)),
               color: Colors.grey.withOpacity(0.70),
               child: ExpansionTile(
-                initiallyExpanded: true,
-                leading: Icon(Icons.perm_device_information),
+                //initiallyExpanded: true,
+                leading: Icon(Icons.perm_contact_calendar_rounded),
                 title: Text(
                   'İletişim',
                   style: GoogleFonts.spartan(
@@ -275,9 +275,29 @@ Widget generate_list(BuildContext tur) {
             ),
             Material(
               borderRadius: BorderRadius.all(Radius.circular(25)),
+              color: Colors.grey.withOpacity(0.70),
+              child: ListTile(
+                leading: Icon(Icons.info_outline_rounded),
+                title: Text(
+                  'Hakkında',
+                  style: GoogleFonts.spartan(
+                    fontWeight: FontWeight.w800,
+                  ),
+                ),
+                trailing: Icon(Icons.arrow_right),
+                onTap: () {
+                  Navigator.of(tur).pushNamed('/credits');
+                },
+              ),
+            ),
+            SizedBox(
+              height: 4,
+            ),
+            Material(
+              borderRadius: BorderRadius.all(Radius.circular(25)),
               color: Colors.red.withOpacity(0.35),
               child: ListTile(
-                leading: Icon(Icons.keyboard),
+                leading: Icon(Icons.bug_report_rounded),
                 title: Text(
                   'Sorun Bildir',
                   style: GoogleFonts.spartan(

@@ -48,10 +48,10 @@ Widget makeHistoryPage(String map_location, String image, String title,
           // SizedBox(
           //   height: 250,
           // ),
-          AnimatedContainer(
-            duration: const Duration(seconds: 1),
-            height: yukseklik,
-            width: 250,
+          SizedBox(
+            //duration: const Duration(seconds: 1),
+            height: 250,
+            //width: 250,
           ),
           Padding(
             padding: const EdgeInsets.only(right: 10, left: 10, bottom: 50),
