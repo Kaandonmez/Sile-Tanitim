@@ -22,6 +22,8 @@ List<Weather> wfdata = [];
 double temp = 0;
 int dakika = 21;
 
+bool isInt = false;
+
 double yukseklik = 250;
 int sayfano = 1;
 

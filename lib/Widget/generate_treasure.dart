@@ -6,7 +6,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 Widget makePage(String map_location, String image, String title,
-    String description, int page, int totalPaget) {
+    String description, int page, int totalPaget, BuildContext context) {
   return Stack(children: [
     Container(
       decoration: BoxDecoration(
@@ -134,5 +134,18 @@ Widget makePage(String map_location, String image, String title,
         ),
       ),
     ),
+    Padding(
+        padding: EdgeInsets.all(8),
+        child: FloatingActionButton(
+          heroTag: "btn1",
+          foregroundColor: Colors.black,
+          backgroundColor: Colors.white54,
+          splashColor: Colors.green,
+          elevation: 11,
+          onPressed: () {
+            Navigator.pop(context);
+          },
+          child: Icon(Icons.arrow_back_ios_new_rounded),
+        ))
   ]);
 }
