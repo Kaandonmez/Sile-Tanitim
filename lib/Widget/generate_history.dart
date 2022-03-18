@@ -15,6 +15,7 @@ Widget makeHistoryPage(String map_location, String image, String title,
     String description, int page, int totalPageh, BuildContext context) {
   return Stack(children: [
     Container(
+      height: MediaQuery.of(context).size.height,
       decoration: BoxDecoration(
         image: DecorationImage(
             colorFilter: ColorFilter.mode(
@@ -53,7 +54,7 @@ Widget makeHistoryPage(String map_location, String image, String title,
           // ),
           SizedBox(
             //duration: const Duration(seconds: 1),
-            height: 250,
+            height: MediaQuery.of(context).size.height / 2,
             //width: 250,
           ),
           Padding(
@@ -80,7 +81,7 @@ Widget makeHistoryPage(String map_location, String image, String title,
                               color: Colors.white.withOpacity(0.8),
                               fontWeight: FontWeight.w600,
                               height: 1.9,
-                              fontSize: 15))),
+                              fontSize: 16))),
                 ),
               ],
             ),

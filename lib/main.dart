@@ -445,7 +445,7 @@ class _Sayfa1State extends State<Sayfa1> {
                                                 Text(
                                                     ww?.tempFeelsLike?.celsius
                                                             ?.toString()
-                                                            .substring(0, 3) ??
+                                                            .substring(0, 4) ??
                                                         " Yükleniyor... ",
                                                     style: GoogleFonts.spartan(
                                                       color: Colors.white70,
@@ -614,7 +614,7 @@ class _Sayfa1State extends State<Sayfa1> {
                         height: 20,
                       ),
                       Text(
-                        "Giriş için ekranı kaydırın",
+                        "",
                         style: GoogleFonts.spartan(color: sile_kirmizisi),
                       ),
                       //Expanded(child: SizedBox())
