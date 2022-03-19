@@ -27,7 +27,7 @@ class _RehberState extends State<Rehber> {
       body: PageView(
         controller: _pageController,
         children: [
-          // todo: makePagemetoduna map stringleri parametre olarak verilecek.
+          // todo: makePagemetoduna map stringleri parametre olarak verilecek. (tamamlandı 15/03/2022)
           makeHistoryPage(
               map_zekimuren,
               elsanat,

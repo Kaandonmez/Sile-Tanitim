@@ -32,7 +32,6 @@ void main() async {
       initialRoute: '/', //  Ana sayfa, başlangıç rotası
       routes: {
         '/': (context) => Sayfa1(),
-        //'/': (context) => MainScreen(),
         '/sayfa4': (context) => MainScreen(),
         '/mekanlar': (context) => Mekanlar(),
         '/plajlar': (context) => Plajlar(),
